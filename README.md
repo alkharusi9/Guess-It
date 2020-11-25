@@ -1,2 +1,2 @@
 # Guess-Number
-hi
+This python program is like a game, it will ask the user 3 different ranges to choose from. Once the user chooses a range it will ask the user to try to guess the right number that was given randomly by the code, it will give the user 3 chances to try, if none is valid then the user will be locked out and says 3 attempts failed, if any guess is correct then it will says "well done, your guess is correct". I wrote this code just for fun, and I hope it could be useful some how for anyone. 
