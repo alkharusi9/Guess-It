@@ -4,7 +4,7 @@ Written by Alsalt Alkharosi.
 import random
 
 
-n = random.random()
+
 crange = input(''' 
                 1) 1 - 100
                 2) 100 - 200
