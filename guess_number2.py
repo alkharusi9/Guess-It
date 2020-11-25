@@ -5,6 +5,7 @@ import random
 
 num1 = int(input('Enter your first number:'))
 num2 = int(input('Enter your last number:'))
+print('The chosen range is ('+str(num1)+'-'+str(num2)+')')
 def range():
     r = random.randint(num1,num2)
     counter = 0
