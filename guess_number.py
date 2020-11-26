@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-Written by Alsalt Alkharosi.
+# Written by Alsalt Alkharosi.
 
 import random
 
