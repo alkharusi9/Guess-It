@@ -1,13 +1,24 @@
 #!/usr/bin/env python3
 Written by Alsalt Alkharosi.
 
-#!/usr/bin/env python3
-
 import random
 
-num1 = int(input('Enter your first number:'))
-num2 = int(input('Enter your last number:'))
-print('[!] The chosen range is ('+str(num1)+'-'+str(num2)+')')
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+
+num1 = int(input(bcolors.WARNING+'Enter your first number:'+bcolors.ENDC))
+num2 = int(input(bcolors.WARNING+'Enter your last number:'+bcolors.ENDC))
+print(bcolors.OKGREEN+'[!] The chosen range is ('+str(num1)+'-'+str(num2)+')'+bcolors.ENDC)
 def range():
     r = random.randint(num1,num2)
     sum = r / 2
@@ -15,24 +26,24 @@ def range():
     valid = False
     while not valid:
         while counter < 3:
-              guess = int(input('[*] Guess the right number:'))
+              guess = int(input(bcolors.WARNING+'[*] Guess the right number:'+bcolors.ENDC))
               if r == guess:
-                print('[*] Well done, your guess',r,'is correct')
+                print(bcolors.OKGREEN+'[*] Well done, your guess',r,'is correct'+bcolors.ENDC)
                 valid = True
                 exit(1)
               elif r < guess:
-                 print('[-] Your guess is higher, try something smaller!')
+                 print(bcolors.FAIL+'[-] Your guess is higher, try something smaller!'+bcolors.ENDC)
                  valid = False
                  counter += 1
               elif r > guess:
-                print('[-] Your guess is smaller, try something higher')
+                print(bcolors.FAIL+'[-] Your guess is smaller, try something higher'+bcolors.ENDC)
                 valid = False
                 counter += 1
               if counter == 2:
-                print('[!] Hint: The number after divided by 2 is:',sum)
+                print(bcolors.WARNING+'[!] Hint: The number after divided by 2 is:'+bcolors.ENDC,sum)
 
               if counter == 3:
-                print('[!] 3 attempts failed, you have been locked out')
+                print(bcolors.FAIL+'[!] 3 attempts failed, you have been locked out'+bcolors.ENDC)
                 exit(1)
               else:
                 pass
