@@ -5,14 +5,14 @@ import random
 
 num1 = int(input('Enter your first number:'))
 num2 = int(input('Enter your last number:'))
-print('The chosen range is ('+str(num1)+'-'+str(num2)+')')
+print('[!] The chosen range is ('+str(num1)+'-'+str(num2)+')')
 def range():
     r = random.randint(num1,num2)
     counter = 0
     valid = False
     while not valid:
         while counter < 3:
-            guess = int(input('Guess the right number:'))
+            guess = int(input('[!] Guess the right number:'))
             if r == guess:
                 print('[*] Well done, your guess',r,'is correct')
                 valid = True
