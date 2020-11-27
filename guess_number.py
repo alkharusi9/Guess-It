@@ -14,12 +14,26 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+def banner():
 
+     print(bcolors.FAIL + """%s     
+     ______                                 ____ __ 
+    / ____/__  __ ___   _____ _____        /  _// /_
+   / / __ / / / // _ \ / ___// ___/______  / / / __/
+  / /_/ // /_/ //  __/(__  )(__  )/_____/_/ / / /_  
+  \____/ \__,_/ \___//____//____/       /___/ \__/
+                        |%s%s                                                          
+                        # Coded By Alsalt Alkharosi - @0x_pwner
+            """ + bcolors.ENDC)
 
-num1 = int(input(bcolors.WARNING+'Enter your first number:'+bcolors.ENDC))
-num2 = int(input(bcolors.WARNING+'Enter your last number:'+bcolors.ENDC))
-print(bcolors.OKGREEN+'[!] The chosen range is ('+str(num1)+'-'+str(num2)+')'+bcolors.ENDC)
 def range():
+    print(bcolors.OKGREEN+''''[!] Here is a game for you to play, enter two numbers and these will be a range, then try to guess the right 
+          number that was chosen randomly by the program,, ENJOY!'''+bcolors.ENDC)
+
+    num1 = int(input(bcolors.WARNING + 'Enter your first number:' + bcolors.ENDC))
+    num2 = int(input(bcolors.WARNING + 'Enter your last number:' + bcolors.ENDC))
+    print(bcolors.OKGREEN + '[!] The chosen range is (' + str(num1) + '-' + str(num2) + ')' + bcolors.ENDC)
+
     r = random.randint(num1,num2)
     sum = r / 2
     counter = 0
@@ -48,4 +62,5 @@ def range():
               else:
                 pass
 if __name__=='__main__':
+    banner()
     range()
