@@ -16,18 +16,17 @@ class bcolors:
 
 def banner():
 
-     print(bcolors.FAIL + """%s     
+     print(bcolors.FAIL + """     
      ______                                 ____ __ 
     / ____/__  __ ___   _____ _____        /  _// /_
    / / __ / / / // _ \ / ___// ___/______  / / / __/
   / /_/ // /_/ //  __/(__  )(__  )/_____/_/ / / /_  
   \____/ \__,_/ \___//____//____/       /___/ \__/
-                        |%s%s                                                          
-                        # Coded By Alsalt Alkharosi - @0x_pwner
+        # Coded By Alsalt Alkharosi - @0x_pwner
             """ + bcolors.ENDC)
 
 def range():
-    print(bcolors.OKGREEN+''''[!] Here is a game for you to play, enter two numbers and these will be a range, then try to guess the right 
+    print(bcolors.OKGREEN+'''   [!] Here is a game for you to play, enter two numbers and these will be a range, then try to guess the right 
           number that was chosen randomly by the program,, ENJOY!'''+bcolors.ENDC)
 
     num1 = int(input(bcolors.WARNING + 'Enter your first number:' + bcolors.ENDC))
